@@ -132,8 +132,8 @@
 @section('footer_script_init')
     <script type="text/javascript">
         $(document).ready(function () {
-            gymie.loadBsTokenInput();
-            gymie.customsendmessage();
+            ecogym.loadBsTokenInput();
+            ecogym.customsendmessage();
         });
     </script>
 @stop     

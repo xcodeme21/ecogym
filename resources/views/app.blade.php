@@ -8,7 +8,7 @@
     <meta content="" name="description"/>
     <meta content="" name="author"/>
 
-    <title>Gymie</title>
+    <title>Ecogym</title>
 
     <!-- BEGIN CORE FRAMEWORK -->
     <link href="{{ URL::asset('assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet"/>
@@ -47,7 +47,7 @@
 <body class="fixed-leftside fixed-header">
 <!-- BEGIN HEADER -->
 <header class="hidden-print">
-    <span class="logo">Gymie</span>
+    <span class="logo">Ecogym</span>
     <nav class="navbar navbar-static-top">
         <a href="#" class="navbar-btn sidebar-toggle">
             <span class="icon-bar"></span>
@@ -87,28 +87,28 @@
                     </a>
                 </li>
 
-                @permission(['manage-gymie','manage-enquiries','view-enquiry'])
+                @permission(['manage-ecogym','manage-enquiries','view-enquiry'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('enquiries*',true) }}">
                     <a href="#">
                         <i class="ion-ios-telephone"></i> <span>Enquiries</span>
                     </a>
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('enquiries/all') }}"><a href="{{ action('EnquiriesController@index') }}">All Enquiries</a></li>
-                        @permission(['manage-gymie','manage-enquiries','add-enquiry'])
+                        @permission(['manage-ecogym','manage-enquiries','add-enquiry'])
                         <li class="{{ Utilities::setActiveMenu('enquiries/create') }}"><a href="{{ action('EnquiriesController@create') }}">Add Enquiry</a></li>
                         @endpermission
                     </ul>
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-members','view-member'])
+                @permission(['manage-ecogym','manage-members','view-member'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('members*',true) }}">
                     <a href="#">
                         <i class="ion-person-add"></i> <span>Members</span>
                     </a>
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('members/all') }}"><a href="{{ action('MembersController@index') }}">All Members</a></li>
-                        @permission(['manage-gymie','manage-members','add-member'])
+                        @permission(['manage-ecogym','manage-members','add-member'])
                         <li class="{{ Utilities::setActiveMenu('members/create') }}"><a href="{{ action('MembersController@create') }}">Add Member</a></li>
                         @endpermission
                         <li class="{{ Utilities::setActiveMenu('members/active') }}"><a href="{{ action('MembersController@active') }}">Active Members</a></li>
@@ -118,21 +118,21 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-payments','view-payment'])
+                @permission(['manage-ecogym','manage-payments','view-payment'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('payments*',true) }}">
                     <a href="#">
                         <i class="ion-cash"></i> <span>Payments</span>
                     </a>
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('payments/all') }}"><a href="{{ action('PaymentsController@index') }}">All Payments</a></li>
-                        @permission(['manage-gymie','manage-payments','add-payment'])
+                        @permission(['manage-ecogym','manage-payments','add-payment'])
                         <li class="{{ Utilities::setActiveMenu('payments/create') }}"><a href="{{ action('PaymentsController@create') }}">Add Payment</a></li>
                         @endpermission
                     </ul>
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-subscriptions','view-subscription'])
+                @permission(['manage-ecogym','manage-subscriptions','view-subscription'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('subscriptions*',true) }}">
                     <a href="#">
                         <i class="ion-android-checkbox-outline"></i> <span>Subscriptions</span>
@@ -140,7 +140,7 @@
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('subscriptions/all') }}"><a href="{{ action('SubscriptionsController@index') }}">All
                                 Subscriptions</a></li>
-                        @permission(['manage-gymie','manage-subscriptions','add-subscription'])
+                        @permission(['manage-ecogym','manage-subscriptions','add-subscription'])
                         <li class="{{ Utilities::setActiveMenu('subscriptions/create') }}"><a href="{{ action('SubscriptionsController@create') }}">Add
                                 Subscription</a></li>
                         @endpermission
@@ -166,7 +166,7 @@
                             </ul>
                         </li> -->
 
-                @permission(['manage-gymie','manage-sms'])
+                @permission(['manage-ecogym','manage-sms'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('sms*',true) }}">
                     <a href="#">
                         <i class="ion-ios-paper"></i> <span>SMS</span>
@@ -180,7 +180,7 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-invoices','view-invoice'])
+                @permission(['manage-ecogym','manage-invoices','view-invoice'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('invoices*',true) }}">
                     <a href="#">
                         <i class="ion-ios-paper"></i> <span>Invoices</span>
@@ -198,21 +198,21 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-expenses','view-expense'])
+                @permission(['manage-ecogym','manage-expenses','view-expense'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('expenses*',true) }}">
                     <a href="#">
                         <i class="fa fa-inr"></i> <span>Expenses</span>
                     </a>
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('expenses/all') }}"><a href="{{ action('ExpensesController@index') }}">All Expenses</a></li>
-                        @permission(['manage-gymie','manage-expenses','add-expense'])
+                        @permission(['manage-ecogym','manage-expenses','add-expense'])
                         <li class="{{ Utilities::setActiveMenu('expenses/create') }}"><a href="{{ action('ExpensesController@create') }}">Add Expense</a></li>
                         @endpermission
-                        @permission(['manage-gymie','manage-expenseCategories','view-expenseCategory'])
+                        @permission(['manage-ecogym','manage-expenseCategories','view-expenseCategory'])
                         <li class="{{ Utilities::setActiveMenu('expenses/categories/all') }}"><a href="{{ action('ExpenseCategoriesController@index') }}">Expense
                                 Categories</a></li>
                         @endpermission
-                        @permission(['manage-gymie','manage-expenseCategories','add-expenseCategory'])
+                        @permission(['manage-ecogym','manage-expenseCategories','add-expenseCategory'])
                         <li class="{{ Utilities::setActiveMenu('expenses/categories/create') }}"><a href="{{ action('ExpenseCategoriesController@create') }}">Add
                                 Category</a></li>
                         @endpermission
@@ -220,21 +220,21 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-plans','view-plan'])
+                @permission(['manage-ecogym','manage-plans','view-plan'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('plans*',true) }}">
                     <a href="#">
                         <i class="ion-compose"></i> <span>Plans</span>
                     </a>
                     <ul>
                         <li class="{{ Utilities::setActiveMenu('plans/all') }}"><a href="{{ action('PlansController@index') }}">All Plans</a></li>
-                        @permission(['manage-gymie','manage-plans','add-plan'])
+                        @permission(['manage-ecogym','manage-plans','add-plan'])
                         <li class="{{ Utilities::setActiveMenu('plans/create') }}"><a href="{{ action('PlansController@create') }}">Add Plan</a></li>
                         @endpermission
-                        @permission(['manage-gymie','manage-services','view-service'])
+                        @permission(['manage-ecogym','manage-services','view-service'])
                         <li class="{{ Utilities::setActiveMenu('plans/services/all') }}"><a href="{{ action('ServicesController@index') }}">Gym Services</a>
                         </li>
                         @endpermission
-                        @permission(['manage-gymie','manage-services','add-service'])
+                        @permission(['manage-ecogym','manage-services','add-service'])
                         <li class="{{ Utilities::setActiveMenu('plans/services/create') }}"><a href="{{ action('ServicesController@create') }}">Add Service</a>
                         </li>
                         @endpermission
@@ -242,7 +242,7 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-users'])
+                @permission(['manage-ecogym','manage-users'])
                 <li class="nav-dropdown {{ Utilities::setActiveMenu('user*',true) }}">
                     <a href="#">
                         <i class="fa fa-users"></i> <span>Users</span>
@@ -254,7 +254,7 @@
                                 Add new user</a></li>
                         <li class="{{ Utilities::setActiveMenu('user/role') }}"><a href="{{ action('AclController@roleIndex') }}"><i class="fa fa-list"></i>
                                 Roles</a></li>
-                        @role('Gymie')
+                        @role('Ecogym')
                         <li class="{{ Utilities::setActiveMenu('user/permission') }}"><a href="{{ action('AclController@permissionIndex') }}"><i
                                         class="fa fa-list"></i> Permissions</a></li>
                         @endrole
@@ -262,7 +262,7 @@
                 </li>
                 @endpermission
 
-                @permission(['manage-gymie','manage-settings'])
+                @permission(['manage-ecogym','manage-settings'])
                 <li class="{{ Utilities::setActiveMenu('settings*') }}">
                     <a href="{{ action('SettingsController@edit') }}">
                         <i class="fa fa-cogs fa-2x"></i> <span>Settings</span>
@@ -316,7 +316,7 @@
 @yield('footer_scripts')
 
 <!-- gymie -->
-<script src="{{ URL::asset('assets/js/gymie.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('assets/js/ecogym.js') }}" type="text/javascript"></script>
 
 @yield('footer_script_init')
 
@@ -324,11 +324,11 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        gymie.loadcounter();
-        gymie.loadprogress();
-        gymie.loaddatepicker();
-        gymie.loaddaterangepicker();
-        gymie.loadbsselect();
+        ecogym.loadcounter();
+        ecogym.loadprogress();
+        ecogym.loaddatepicker();
+        ecogym.loaddaterangepicker();
+        ecogym.loadbsselect();
     });
 
 </script>

@@ -8,7 +8,7 @@
     <meta content="" name="description"/>
     <meta content="" name="author"/>
 
-    <title>Gymie - Login</title>
+    <title>Ecogym - Login</title>
 
     <!-- BEGIN CORE FRAMEWORK -->
     <link href="{{ URL::asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"/>
@@ -86,6 +86,6 @@
 <script src="{{ URL::asset('assets/js/login.js') }}" type="text/javascript"></script>
 
 <!-- gymie -->
-<script src="{{ URL::asset('assets/js/gymie.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('assets/js/ecogym.js') }}" type="text/javascript"></script>
 </body>
 </html>

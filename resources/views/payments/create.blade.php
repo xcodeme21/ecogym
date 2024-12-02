@@ -34,8 +34,8 @@
         @section('footer_script_init')
             <script type="text/javascript">
                 $(document).ready(function () {
-                    gymie.loaddatepicker();
-                    gymie.chequedetails();
+                    ecogym.loaddatepicker();
+                    ecogym.chequedetails();
                 });
             </script>
 @stop

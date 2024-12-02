@@ -123,7 +123,7 @@ var gymie = (function ($) {
 
 			// LINE CHART
 			var line = new Morris.Line({
-				element: 'gymie-registrations-trend',
+				element: 'ecogym-registrations-trend',
 				resize: true,
 				data: JSON.parse(jsRegistraionsCount),
 				xkey: 'month',
@@ -135,7 +135,7 @@ var gymie = (function ($) {
 
 			//DONUT CHART
 			var donut = new Morris.Donut({
-				element: 'gymie-members-per-plan',
+				element: 'ecogym-members-per-plan',
 				resize: true,
 				colors: ["#e74c3c", "#e67e22", "#3498db"],
 				data: JSON.parse(jsMembersPerPlan),
@@ -167,13 +167,13 @@ var gymie = (function ($) {
 		/* --------------------------------- */
 		loaddaterangepicker: function () {
 			function cb(start, end) {
-				$('.gymie-daterangepicker span').html(moment(start).format('YYYY-MM-DD') + ' - ' + moment(end).format('YYYY-MM-DD'));
+				$('.ecogym-daterangepicker span').html(moment(start).format('YYYY-MM-DD') + ' - ' + moment(end).format('YYYY-MM-DD'));
 				$('#drp_start').val(moment(start).format('YYYY-MM-DD'));
 				$('#drp_end').val(moment(end).format('YYYY-MM-DD'));
 			}
 			//cb(moment().startOf('month').format('YYYY-MM-DD'), moment().endOf('month').format('YYYY-MM-DD'));
 
-			$('.gymie-daterangepicker').daterangepicker({
+			$('.ecogym-daterangepicker').daterangepicker({
 				ranges: {
 					'Today': [moment(), moment()],
 					'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -492,8 +492,8 @@ var gymie = (function ($) {
 					// $('#membersform').bootstrapValidator('addField', 'plan[' + x + '].start_date', startDateValidators);
 
 					// Reattach 3rd Party plugins
-					gymie.loadbsselect();
-					gymie.loaddatepickerstart();
+					ecogym.loadbsselect();
+					ecogym.loaddatepickerstart();
 
 					// Rerun needed logic
 					getPlanAmount();

@@ -253,10 +253,10 @@
 @section('footer_script_init')
     <script type="text/javascript">
         $(document).ready(function () {
-            gymie.loaddatepickerstart();
-            gymie.chequedetails();
-            gymie.subscription();
-            gymie.subscriptionChange();
+            ecogym.loaddatepickerstart();
+            ecogym.chequedetails();
+            ecogym.subscription();
+            ecogym.subscriptionChange();
         });
     </script>
 @stop

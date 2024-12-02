@@ -6,7 +6,7 @@
 
         <div class="container-fluid">
             @include('flash::message')
-            @permission(['manage-gymie','view-dashboard-quick-stats'])
+            @permission(['manage-ecogym','view-dashboard-quick-stats'])
             <!-- Stat Tile  -->
             <div class="row margin-top-10">
                 <!-- Total Members -->
@@ -43,7 +43,7 @@
 
             <!--Member Quick views -->
             <div class="row"> <!--Main Row-->
-                @permission(['manage-gymie','view-dashboard-members-tab'])
+                @permission(['manage-ecogym','view-dashboard-members-tab'])
                 <div class="col-lg-6">
                     <div class="panel">
                         <div class="panel-title">
@@ -87,7 +87,7 @@
                 </div>
                 @endpermission
 
-                @permission(['manage-gymie','view-dashboard-enquiries-tab'])
+                @permission(['manage-ecogym','view-dashboard-enquiries-tab'])
                 <!--Enquiry Quick view Tabs-->
                 <div class="col-lg-6">
                     <div class="panel">
@@ -122,7 +122,7 @@
             </div> <!--/Main row -->
 
 
-            @permission(['manage-gymie','view-dashboard-expense-tab'])
+            @permission(['manage-ecogym','view-dashboard-expense-tab'])
             <div class="row">
                 <!--Expense Quick view Tabs-->
                 <div class="col-lg-6">
@@ -194,7 +194,7 @@
 
             </div>
 
-            @permission(['manage-gymie','view-dashboard-charts'])
+            @permission(['manage-ecogym','view-dashboard-charts'])
             <div class="row">
                 <div class="col-lg-6">
                     <div class="panel">
@@ -246,10 +246,10 @@
                         </div>
                         <div class="panel-body padding-top-10">
                             @if(!empty($membersPerPlan))
-                                <div id="gymie-members-per-plan" class="chart"></div>
+                                <div id="ecogym-members-per-plan" class="chart"></div>
                             @else
                                 <div class="tab-empty-panel font-size-24 color-grey-300">
-                                    <div id="gymie-members-per-plan" class="chart"></div>
+                                    <div id="ecogym-members-per-plan" class="chart"></div>
                                     No Data
                                 </div>
                             @endif
@@ -265,7 +265,7 @@
                             <div class="panel-head">Registration Trend</div>
                         </div>
                         <div class="panel-body no-padding-top">
-                            <div id="gymie-registrations-trend" class="chart"></div>
+                            <div id="ecogym-registrations-trend" class="chart"></div>
                         </div>
                     </div>
                 </div>
@@ -315,7 +315,7 @@
 @section('footer_script_init')
     <script type="text/javascript">
         $(document).ready(function () {
-            gymie.loadmorris();
+            ecogym.loadmorris();
         });
     </script>
 @stop

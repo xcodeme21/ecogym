@@ -36,11 +36,11 @@ body{
 }
 
 /* Pagination */
-.gymie_paging_info{
+.ecogym_paging_info{
     padding-top: 8px;
 }
 
-.gymie_paging ul.pagination {
+.ecogym_paging ul.pagination {
     margin: 2px 0;
     white-space: nowrap;
 }
